@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pramod Reddy Pandiri Professional </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1, c.length);
+                }
+                if (c.indexOf(nameEQ) == 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return null;
+        }
+
+        function cookieExists(name) {
+            return document.cookie.split(';').some((item) => item.trim().startsWith(name + '='));
+        }
+
+        function displayWelcomeBanner() {
+            var visits = 1;
+            var lastVisit = "";
+            if (cookieExists("visits")) {
+                visits = parseInt(getCookie("visits")) + 1;
+                lastVisit = getCookie("lastVisit");
+            } else {
+                var currentDate = new Date().toLocaleString();
+                setCookie("visits", visits, 365);
+                setCookie("lastVisit", currentDate, 365);
+                document.getElementById("welcome-banner").innerHTML = "Welcome to my homepage!";
+                return;
+            }
+            var currentDate = new Date().toLocaleString();
+            setCookie("visits", visits, 365);
+            setCookie("lastVisit", currentDate, 365);
+            var message = "Welcome back! Your last visit was " + lastVisit;
+            document.getElementById("welcome-banner").innerHTML = message;
+        }
+
+        window.onload = displayWelcomeBanner;
+        
+        
+        
+        
+    </script>
+      
+        <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSD4M1Q2W3"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-CSD4M1Q2W3');
+            </script>
+</head>
+<body>
+    <div id="whole-container container flex flex-col mx-auto items-center justify-between">
+        <nav class="flex md:flex-row items-center sticky top-0 z-50 bg-orange-500 rounded-xl justify-between mb-5 p-5">
+            <div class="logo">
+                <a href="#" class="hover:text-gray-400 text-white px-2">PramodReddy</a>
+            </div>
+            <div class="flex items-center">
+                <div id="nav-items" class="menu hidden flex flex-col md:flex md:flex-row items-center justify-between space-x-6">
+                    <a href="#" class="hover:text-gray-900 text-white px-2">About Me</a>
+                    <a href="#education" class="hover:text-gray-900 text-white px-2">Education</a>
+                    <a href="#projects" class="hover:text-gray-900 text-white px-2">Projects</a>
+                    <a href="#projects" class="hover:text-gray-900 text-white px-2">Skills</a>
+                </div>
+                <!-- button -->
+                <div>
+                    <a href="/Pramod_UCMAIL.pdf" class="menu-btn md:block md:mr-10 p-2.5 px-5 rounded-3xl text-white hover:bg-white hover:text-black hover:border-black border-black border-2 hover:border-1 bg-orange-500" download="Pramod_Resume">Download Resume</a>
+                    <a href="#" onclick="toggleMenu()" class="ham-menu md:hidden">
+                        <i class="fa-solid fa-bars text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+          <div class="welcome-banner text-center">
+           
+                <div id="welcome-banner" class="text-center text-xl font-semibold"></div>
+            
+          </div>
+          <div id="hero-container">
+            <header class="container my-10 w-full h-full flex md:flex-row flex-col justify-between items-center">
+                    <div class="w-1/2 h-auto flex flex-col items-center justify-between rounded-3xl">
+                        <img src="/Images/IMG_0372.png"  alt="Headshot" class="w-8/12 rounded-3xl border-4 border-gray-600 shadow-lg">
+                    </div>
+                    <div class="w-1/2 h-auto flex flex-col gap-10 items-start my-5   justify-strech    rounded-3xl">
+                        <div class="w-full h-full p-3 py-4 bg-gray-200 rounded-2xl">
+                            <span class="py-1 text-orange-500 text-semibold">Personal Details:</span><br>
+                            <div class="py-1 rounded-3xl ">Pramod Reddy Pandiri</div>
+                            <div class="py-1 rounded-3xl"><a href="mailto:pandirpy@mail.uc.edu" class="text-blue-500 hover:underline">pandirpy@mail.uc.edu</a></div>
+                            <div class=" py-1 rounded-3xl"><span>Mobile:</span><strong>(513) 430 5040</strong></div>
+                            <p class=" py-1 text-orange-500 text-semibold">Social Profiles:</p>
+                            <div class=" rounded-3xl "><a href="" class="text-blue-500 hover:underline">LinkedIn</a></div>
+                            <div class="rounded-3xl "><a href="" class="text-blue-500 hover:underline">GitHub</a></div>
+
+                        </div>
+                        <div id="aboutme" class="p-4 my-4 rounded-2xl bg-gray-200">
+                            <span class="text-orange-500 text-semibold">About me:</span><br>
+
+                            As a fervent web developer, I am dedicated to crafting intuitive websites and applications that prioritize user satisfaction. Proficient in HTML, CSS, JavaScript, and modern frameworks, I consistently pursue new technologies to expand my skill set. I am committed to ongoing learning, constantly exploring innovative approaches to enhance user experiences and create impactful digital solutions.
+
+                        </div>
+                        
+                    </div>
+                    
+                    </div>
+                </div>
+            </header>
+            <section class="container-cards container w-full mx-auto flex ">
+                <div class="education-expericene w-full  flex md:flex-row md:gap-10 justify-between items-center md:items-start flex-col  mx-auto h-auto">
+                    
+                        <div id="education" class="card-education h-auto my-10 p-4 one w-1/2 bg-orange-500  rounded-2xl">
+                            <h3 class="font-bold text-gray-700 text-xl">Education</h3>
+                            <div class="Masters" id="Masters">
+                                <p class="font-bold text-white">University of Cincinnati.</p>
+                                <p class="text-white">Masters in Information Technology.</p>
+                                <p class=""><a href="/waph.html" target="_blank"><span class="text-white">Course: </span><span class="text-blue-500">Web Programmong and Ethical Hacking.</span> </a></p>
+                                <p class="text-gray-700"> 2023 Aug -2025 Apr</p>
+                            </div>
+                            <div class="Bacherlors py-2 " id="Bacherlors">
+                                <p class="font-bold text-white">Vardhaman College of Engieering.</p>
+                                <p class="text-white">Bachelors</p>
+                                <p class="text-white">B.Tech in Mechanical Engineering.</p>
+                                <p><a href="" target="_blank"> </a></p>
+                                <p class="text-gray-700"> 2017 June - 2021 June</p>
+
+                            </div>
+    
+                            
+                        </div>
+                        <div id="experience" class="card-experince h-auto two my-10 p-4 w-1/2 bg-orange-500  rounded-2xl">
+                            <h3 class="font-bold text-xl text-gray-700">Experience</h3>
+                            <div class="Masters" id="Masters">
+                                <p class="font-bold text-white">Tata Consultancy Services.</p>
+                                <p  class="text-white">Role: Polarion Developer.</p>
+                                <p class="text-white">Tech Stack: JavaScript, Java, Linux, PostgreSQL</p>
+                                <p class="text-gray-700"> 2021 Nov -2023 Aug</p>
+                            </div>
+                            <div class="Bachelors py-2 " id="Bachelors">
+                                <p class="font-bold text-white">Intern Student.</p>
+                                <p  class="text-white">Web Developement.</p>
+                                <p  class="text-white">Tech Stack: MERN</p>
+                                <p class="text-gray-700"> 2022 July - 2023 Jan</p>
+
+                            </div>
+                            
+                              
+                        </div>
+                      
+                    </div>
+
+                    
+
+                </div>
+            </section>
+            <section class="container-cards container w-full mx-auto flex ">
+                <div id="projects" class="education-expericene w-full  flex md:flex-row md:gap-10 justify-between items-center md:items-start flex-col  mx-auto h-auto">
+                    
+                        <div class="card-education h-auto my-10 p-4 one w-1/2 bg-orange-500  rounded-2xl">
+                            <h3 class="font-bold text-gray-700 text-xl">Projects</h3>
+                            <div class="Masters" id="Masters">
+                                <p class="text-white"><a>Expense Tracker</a> <a href="https://github.com/pramodreddypandiri/Expense-Tracker" class="text-blue-500"> GitHub</a></p>
+                                <p class="text-white"><a>E-Commerce</a><a href="https://github.com/pramodreddypandiri/ecommerce" class="text-blue-500"> GitHub</a></p>
+                                <p class="text-white"><a href="" >YT Clone </a><a href="https://github.com/pramodreddypandiri/yt_clone" class="text-blue-500"> GitHub</a></p>
+                                <p class="text-white"> TO-DO App<a href="https://github.com/pramodreddypandiri/TO-D0" class="text-blue-500"> GitHub</a></p>
+                            </div>
+                            
+    
+                            
+                        </div>
+                        <div class="card-experince h-auto two my-10 p-4 w-1/2 bg-orange-500  rounded-2xl">
+                            <h3 class="font-bold text-xl text-gray-700">Skills</h3>
+                            <div class="Masters" id="Masters">
+                                <p class="font text-white">Web Developement</p>
+                                <p  class="text-white">Programming langauges: JavaScript, Java, Python, PHP</p>
+                                <p class="text-white">Tech Stack: JavaScript, Java, Linux, PostgreSQL</p>
+                                <p class="text-white"> Agiles, DevOps, Incident Mangement</p>
+                            </div>
+                            <!-- <div class="Bachelors py-2 " id="Bachelors">
+                                <p class="font-bold text-white">Intern Student.</p>
+                                <p  class="text-white">Web Developement.</p>
+                                <p  class="text-white">Tech Stack: MERN</p>
+                                <p class="text-gray-700"> 2022 July - 2023 Jan</p>
+
+                            </div> -->
+                            
+                              
+                        </div>
+                      
+                    </div>
+
+                    
+
+                </div>
+            </section>
+            
+
+
+          </div>
+
+    </div>
+    <script>
+     function toggleMenu() {
+        var menu = document.getElementById('nav-items');
+        menu.classList.toggle('hidden');
+    }
+    
+ 
+    </script>
+</body>
+</html>
