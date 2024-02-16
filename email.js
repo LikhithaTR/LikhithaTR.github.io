@@ -7,8 +7,8 @@ function show_or_hide_email(){
         visible = false
     } else{
         console.log("else")
-        var email_to_show = "<a href='mailto:pandirpy@mail.uc.edu'> pandirpy@mail.uc.edu</a>";
-        //"<a href='mailto:pandirpy@mail.uc.edu'> pandirpy@mail.uc.edu</a>"
+        var email_to_show = "<a href='mailto:tirumala@mail.uc.edu'> tirumala@mail.uc.edu</a>";
+        //"<a href='mailto:tirumala@mail.uc.edu'> tirumala@mail.uc.edu</a>"
         email.innerHTML = email_to_show;
         console.log(email);
         visible = true
