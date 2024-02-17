@@ -238,5 +238,49 @@
     
  
     </script>
+
+<script>
+  // Function to set a cookie with the current date/time
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  // Function to get the value of a cookie by name
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i];
+      while (cookie.charAt(0) == ' ') {
+        cookie = cookie.substring(1, cookie.length);
+      }
+      if (cookie.indexOf(nameEQ) == 0) {
+        return cookie.substring(nameEQ.length, cookie.length);
+      }
+    }
+    return null;
+  }
+
+  // Function to display a welcome message based on the presence of the "lastVisit" cookie
+  function displayWelcomeMessage() {
+    var lastVisit = getCookie("lastVisit");
+    if (lastVisit) {
+      alert("Welcome back! Your last visit was " + lastVisit);
+    } else {
+      setCookie("lastVisit", new Date(), 365); // Set a cookie for one year
+      alert("Welcome to my homepage!");
+    }
+  }
+
+  // Call the function to display the welcome message
+  displayWelcomeMessage();
+</script>
+
 </body>
 </html>
